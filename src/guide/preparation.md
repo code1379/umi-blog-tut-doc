@@ -236,10 +236,16 @@ npx prisma init
 
 ### 连接到数据库
 
+:::danger
+github 项目必须是 private 的，否则 planetscale 会监测到，然后发送邮件。
+A thiem umi-blog database password has been detected in a public repository on GitHub. This **password has been revoked** .
+Any connections using this password will be disconnected.
+:::
+
 第一步，~~我们在根目录建立一个~~在 `.env` 文件 ~~，并且在~~ 里面加入刚刚在 [注册 PlanetScale 服务](https://umijs.org/docs/tutorials/blog#%E6%B3%A8%E5%86%8C-planetscale-%E6%9C%8D%E5%8A%A1) 章节拿到的连线信息。
 
 ```bash
-DATABASE_URL='mysql://1knskswfh6ub:pscale_pw_ZXDva6Ma7p2-TimpEPgpHSxdNK6OuYOyW8kU7ffDGF0@chtl6ffosmbh.ap-southeast-2.psdb.cloud/umi-blog?sslaccept=strict'
+DATABASE_URL='mysql://********:********@chtl6ffosmbh.ap-southeast-2.psdb.cloud/umi-blog?sslaccept=strict'
 ```
 
 ### 编写 Prisma 配置
