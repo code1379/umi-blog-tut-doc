@@ -11,6 +11,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   srcDir: "src",
   themeConfig: {
     logo: "/logo.svg",
+    outlineTitle: "页面概览",
     sidebar: {
       "/guide/": [
         {
@@ -18,7 +19,7 @@ export default defineConfigWithTheme<ThemeConfig>({
           // collapsible: true,
           items: [
             { text: "快速上手", link: "/guide/getting-started" },
-            { text: "简介", link: "/guide/introduction" },
+            { text: "准备工作", link: "/guide/preparation" },
           ],
         },
       ],
@@ -48,5 +49,9 @@ export default defineConfigWithTheme<ThemeConfig>({
         ],
       },
     ],
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2022-present Guo Yuan",
+    },
   },
 });
