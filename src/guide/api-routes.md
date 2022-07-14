@@ -130,3 +130,59 @@ JWT_SECRET='secret_key or you can use rsa to generate secret key'
     "avatarUrl": "http://dummyimage.com/120x60"
 }
 ```
+
+## 用户登录
+
+从数据库中查找，判断有没有该用户。有该用户的话，判断密码是否匹配。不匹配返回错误信息。正确，进行登录并返回用户信息。
+
+```typescript
+// api/login.ts
+import type { UmiApiRequest, UmiApiResponse } from "umi";
+import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
+import { singToken } from "@/utils/jwt";
+
+export default async function (req: UmiApiRequest, res: UmiApiResponse) {
+  switch (req.method) {
+    case "GET":
+      res.json({ login: "is working" });
+      break;
+    case "POST":
+      try {
+        // 获取 body 中的数据
+        const { email, password } = req.body;
+        const prisma = new PrismaClient();
+        const user = await prisma.user.findUnique({
+          where: {
+            email,
+          },
+        });
+
+        // 如果没有该用户
+        if (!user || !bcrypt.compareSync(password, user.passwordHash)) {
+          res.status(401).json({ message: "请输入正确的邮箱或密码" });
+          await prisma.$disconnect();
+          return;
+        }
+
+        res
+          .status(200)
+          .setCookie("token", await singToken(user.id))
+          .json({ ...user, passwordHash: undefined });
+        await prisma.$disconnect();
+      } catch (e: any) {
+        res.status(500).json({
+          result: false,
+          message:
+            typeof e.code === "string"
+              ? "https://www.prisma.io/docs/reference/api-reference/error-reference#" +
+                e.code.toLowerCase()
+              : e,
+        });
+      }
+      break;
+    default:
+      res.status(405).json({ error: "Method not allowed" });
+  }
+}
+```
