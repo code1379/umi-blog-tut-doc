@@ -1,0 +1,31 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\guojingzhou\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\guojingzhou\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Bandizip;%JAVA_HOME%\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Users\guojingzhou\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\guojingzhou\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\guojingzhou\AppData\Local\Programs\Python\Python310;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Bandizip;%JAVA_HOME%\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Users\guojingzhou\AppData\Roaming\nvm;C:\Program Files\nodejsC;C:\Program Files\Git\Users\guojingzhou\Downloads\Antdownload_v3.0.3\Antdownload_v3.0.3\config\maria2c.exe;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (C:\Users\guojingzhou\AppData\Roaming\nvm\v16.15.0\node_modules\yarn\lib\cli.js:92857:59)
+      at Object.<anonymous> (C:\Users\guojingzhou\AppData\Roaming\nvm\v16.15.0\node_modules\yarn\lib\cli.js:85047:38)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\guojingzhou\AppData\Roaming\nvm\v16.15.0\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\guojingzhou\AppData\Roaming\nvm\v16.15.0\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
