@@ -11,16 +11,18 @@ export default defineConfigWithTheme<ThemeConfig>({
   srcDir: "src",
   themeConfig: {
     logo: "/logo.svg",
-    sidebar: [
-      {
-        text: "开始",
-        // collapsible: true,
-        items: [
-          { text: "简介", link: "/introduction" },
-          { text: "Getting Started", link: "/getting-started" },
-        ],
-      },
-    ],
+    sidebar: {
+      "/guide/": [
+        {
+          text: "开始",
+          // collapsible: true,
+          items: [
+            { text: "快速上手", link: "/guide/getting-started" },
+            { text: "简介", link: "/guide/introduction" },
+          ],
+        },
+      ],
+    },
     nav: [
       {
         text: "Guide",
