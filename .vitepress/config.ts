@@ -21,6 +21,7 @@ export default defineConfigWithTheme<ThemeConfig>({
             { text: "快速上手", link: "/guide/getting-started" },
             { text: "准备工作", link: "/guide/preparation" },
             { text: "实现API路由", link: "/guide/api-routes" },
+            { text: "页面搭建", link: "/guide/build-page" },
           ],
         },
       ],
