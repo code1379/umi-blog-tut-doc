@@ -24,6 +24,10 @@ export default defineConfigWithTheme<ThemeConfig>({
             { text: "页面搭建", link: "/guide/build-page" },
           ],
         },
+        {
+          text: "umi4 相关",
+          items: [{ text: "umi4 插件", link: "/guide/umi4-plugins" }],
+        },
       ],
     },
     nav: [
